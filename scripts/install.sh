@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 set -e
 
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+
 echo "Starting setup..."
 
 # Update package manager
 sudo apt-get update
 
 # Install tools
-sudo apt-get install -y ripgrep fd-find xclip bat fzf neovim tmux
+sudo apt-get install -y xclip tmux
 
-# Create aliases for tools with different command names
-#ln -sf /usr/bin/rg /usr/local/bin/ripgrep 2>/dev/null || true
-#ln -sf /usr/bin/fdfind /usr/local/bin/fd 2>/dev/null || true
-#ln -sf /usr/bin/batcat /usr/local/bin/bat 2>/dev/null || true
+# Run IDE setup
+bash "$SCRIPT_DIR/install_ide.sh"
 
 echo "Setup complete!"
