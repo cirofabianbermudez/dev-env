@@ -43,10 +43,6 @@ rm -rf tree-sitter-cli-linux-x64.zip
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Get Neovim configuration ($HOME/.local/share/nvim is where Neovim stores its data)
-cd $HOME/.config
-git clone https://github.com/cirofabianbermudez/nvim.git
-
-# Load new PATH
-source $HOME/.bashrc
+git clone https://github.com/cirofabianbermudez/nvim.git $HOME/.config/nvim
 
 echo "Setup complete!"

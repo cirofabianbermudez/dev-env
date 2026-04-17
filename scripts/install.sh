@@ -14,4 +14,4 @@ sudo apt-get install -y xclip tmux
 # Run IDE setup
 bash "$SCRIPT_DIR/install_ide.sh"
 
-echo "Setup complete!"
+echo "IDE setup complete!"
