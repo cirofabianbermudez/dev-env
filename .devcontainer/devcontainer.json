@@ -1,0 +1,14 @@
+{
+  "name": "Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+  "postCreateCommand": "bash ./scripts/install.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "asvetliakov.vscode-neovim",
+        "yzhang-gh.vscode-markdown",
+        "surfer-project.surfer"
+      ]
+    }
+  }
+}
